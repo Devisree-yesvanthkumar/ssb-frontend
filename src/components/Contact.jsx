@@ -44,7 +44,7 @@ export default function Contact() {
     }
     setLoading(true)
     try {
-      await axios.post('/api/contact', form)
+      await axios.post('https://ssb-backend-6mnml9shr-devisreeyesvanthkumar-8614s-projects.vercel.app/api/contact', form)
       showToast(`Thanks ${form.name}! We'll call you back shortly. 🎉`)
       setForm({ name: '', phone: '', service: 'General Enquiry', message: '' })
     } catch {
