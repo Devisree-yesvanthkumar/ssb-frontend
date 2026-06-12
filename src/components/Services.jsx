@@ -1,6 +1,6 @@
 const services = [
   { icon: 'ti-copy',      title: 'Xerox & Printing',         desc: 'Black & white and color prints. Bulk orders welcome. Fast delivery every time.',             tag: '₹1 per page onwards' },
-  { icon: 'ti-file-text', title: 'Telugu Document Typing',   desc: 'Official letters, applications, affidavits & forms typed professionally in Telugu.',          tag: 'Budget friendly' },
+  { icon: 'ti-file-text', title: 'DTP',                      desc: 'Telugu & English, All documents typing, Telugu old documents translation.',                   tag: 'Budget friendly' },
   { icon: 'ti-license',   title: 'Stamp Papers',             desc: 'All denominations available on the spot. No need to go anywhere else.',                        tag: 'All denominations' },
   { icon: 'ti-id-badge',  title: 'ID & Passport Photos',     desc: 'Instant prints in all standard sizes — Aadhaar, passport, visa, and more.',                    tag: 'Instant ready' },
   { icon: 'ti-scan',      title: 'Scanning & Digitization',  desc: 'Convert your physical documents to high-quality digital files in minutes.',                     tag: 'All formats' },
