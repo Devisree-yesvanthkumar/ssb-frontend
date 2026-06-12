@@ -7,7 +7,7 @@ const hours = [
   { day: 'Thursday',  time: '10:00 AM – 09:00 PM' },
   { day: 'Friday',    time: '10:00 AM – 09:00 PM' },
   { day: 'Saturday',  time: '10:00 AM – 09:00 PM' },
-  { day: 'Sunday',    time: 'Closed', closed: true },
+  { day: 'Sunday',    time: '10:00 AM – 09:00 PM' },
 ]
 
 export default function Hours() {
@@ -63,7 +63,7 @@ export default function Hours() {
             </h3>
 
             {[
-              { icon: 'ti-map-pin', color: '#E94560', label: 'Address', value: '1-2-190/1, Indera Colony, Balaji Colony\nTirupati, Andhra Pradesh 517501', isText: true },
+              { icon: 'ti-map-pin', color: '#E94560', label: 'Address', value: '1-2-190, Police Quarters Lane, Balaji Colony\n Prakasam Road, Tirupati-517501, Andhra Pradesh', isText: true },
               { icon: 'ti-phone',   color: '#E94560', label: 'Phone',   value: '099495 42232', href: 'tel:09949542232' },
               { icon: 'ti-brand-whatsapp', color: '#25D366', label: 'WhatsApp', value: '+91 99495 42232', href: 'https://wa.me/919949542232', target: '_blank' },
             ].map((item, i) => (
