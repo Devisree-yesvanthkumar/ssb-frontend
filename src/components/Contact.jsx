@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 const SERVICES = [
-  'General Enquiry', 'Xerox & Printing', 'Telugu Document Typing',
+  'General Enquiry', 'Xerox & Printing', 'DTP',
   'Stamp Papers', 'ID & Passport Photos', 'Scanning & Digitization',
   'Binding & Lamination', 'Juice / Beverages'
 ]
