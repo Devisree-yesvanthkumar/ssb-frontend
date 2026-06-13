@@ -1105,9 +1105,8 @@ document.getElementById('contact-form').addEventListener('submit', async functio
       throw new Error(data.error || 'Something went wrong');
     }
   } catch (err) {
-    // Fallback: show success anyway for demo (backend may not be running)
-    showToast('Thanks ' + name + '! We\'ll call you back shortly. 🎉');
-    this.reset();
+    console.error('Form error:', err);
+    showToast('Something went wrong. Please call us directly on 099495 42232', true);
   } finally {
     btn.disabled = false;
     btn.innerHTML = '<i class="ti ti-send"></i> <span>Send Enquiry</span>';
