@@ -15,42 +15,36 @@ const PHOTOS = {
 
 function MenuItem({ name, price }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '9px 0',
-        borderBottom: '1px solid rgba(255,255,255,0.08)',
-      }}
-    >
-      <span
-        style={{
-          fontSize: 13,
-          color: 'rgba(255,255,255,0.85)',
-          fontFamily: 'Inter,sans-serif',
-        }}
-      >
-        {name}
-      </span>
-
-      <span
-        style={{
-          fontFamily: 'Poppins,sans-serif',
-          fontSize: 13,
-          fontWeight: 700,
-          color: '#FF6B35',
-          background: 'rgba(255,107,53,0.12)',
-          padding: '4px 10px',
-          borderRadius: 50,
-        }}
-      >
-        ₹{price}
-      </span>
+    <div style={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'space-between', 
+      padding: '9px 0', 
+      borderBottom: '1px solid rgba(255,255,255,0.07)',
+      gap: 8,
+      flexWrap: 'nowrap'
+    }}>
+      <span style={{ 
+        fontSize: 13, 
+        color: 'rgba(255,255,255,0.85)', 
+        fontFamily: 'Inter, sans-serif',
+        flex: 1,
+        paddingRight: 8
+      }}>{name}</span>
+      <span style={{ 
+        fontFamily: 'Poppins, sans-serif', 
+        fontSize: 13, 
+        fontWeight: 700, 
+        color: '#FF6B35', 
+        background: 'rgba(255,107,53,0.12)', 
+        padding: '3px 10px', 
+        borderRadius: 50,
+        whiteSpace: 'nowrap',
+        flexShrink: 0
+      }}>₹{price}</span>
     </div>
   )
 }
-
 function JuiceCard({ children, featured, delay }) {
   return (
     <div
@@ -62,7 +56,7 @@ function JuiceCard({ children, featured, delay }) {
           ? '1px solid rgba(255,215,0,0.4)'
           : '1px solid rgba(56,239,125,0.2)',
         borderRadius: 24,
-        padding: 28,
+        padding: 'clamp(16px, 4vw, 28px)'
       }}
     >
       {children}
