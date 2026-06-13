@@ -1092,7 +1092,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   btn.disabled = true;
   btn.innerHTML = '<i class="ti ti-loader" style="animation:spin 1s linear infinite"></i> <span>Sending...</span>';
   try {
-    const res = await fetch('https://ssb-backend.vercel.app', {
+    const res = await fetch('https://ssb-backend.vercel.app/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, phone, service, message })
