@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ssb-frontend-iota.vercel.app/sitemap.xml
