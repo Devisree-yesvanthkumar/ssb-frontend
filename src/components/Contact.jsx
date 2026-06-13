@@ -45,7 +45,7 @@ export default function Contact() {
     setLoading(true)
     try {
       const res = await axios.post(
-        'https://ssb-backend-6mnml9shr-devisreeyesvanthkumar-8614s-projects.vercel.app/api/contact',
+        'https://ssb-backend.vercel.app',
         form
       )
       if (res.data.success) {
