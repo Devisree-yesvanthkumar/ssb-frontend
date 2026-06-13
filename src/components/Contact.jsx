@@ -44,13 +44,17 @@ export default function Contact() {
     }
     setLoading(true)
     try {
-      await axios.post('https://ssb-backend-6mnml9shr-devisreeyesvanthkumar-8614s-projects.vercel.app/api/contact', form)
-      showToast(`Thanks ${form.name}! We'll call you back shortly. 🎉`)
-      setForm({ name: '', phone: '', service: 'General Enquiry', message: '' })
-    } catch {
-      // Fallback for demo when backend isn't running
-      showToast(`Thanks ${form.name}! We'll call you back shortly. 🎉`)
-      setForm({ name: '', phone: '', service: 'General Enquiry', message: '' })
+      const res = await axios.post(
+        'https://ssb-backend-6mnml9shr-devisreeyesvanthkumar-8614s-projects.vercel.app/api/contact',
+        form
+      )
+      if (res.data.success) {
+        showToast(`Thanks ${form.name}! We'll call you back shortly. 🎉`)
+        setForm({ name: '', phone: '', service: 'General Enquiry', message: '' })
+      }
+    } catch (err) {
+      console.error('Error:', err)
+      showToast('Something went wrong. Please call us directly.', 'error')
     } finally {
       setLoading(false)
     }
